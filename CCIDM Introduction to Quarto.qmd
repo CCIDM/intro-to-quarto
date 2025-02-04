@@ -582,6 +582,12 @@ plot(cars)
 
 # Publishing on the web by Dr. Carsten Lange (15 min)
 
+1.  Creating html, PDFs and PowerPoints with Quarto
+    -   For detailed domonstration of [How to install tinyTex](https://www.youtube.com/watch?v=OUWOx80eJqk), click the link.
+2.  Creating a Website for your Documents and Slides with Quarto
+3.  Easy Publishing with `Netlify`  
+
+
 # Panel Discussion and Q&A Moderated by Dr. Jung (15 min)
 
 -   panelists
