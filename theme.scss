@@ -113,9 +113,9 @@ pre code {
 // Logo class
 .reveal .slide-logo {
   
-  bottom: 10px !important;
-  right: 10px !important;
-  width: 200px !important;
+  bottom: 5px !important;
+  right: 5px !important;
+  width: 125px !important;
   height: auto !important;
   max-height: none !important;
 }
@@ -124,4 +124,28 @@ pre code {
 @keyframes progressColor {
   0%   { background-color: $cpp-green; }
   100% { background-color: $cpp-gold;  }
+}
+
+/* Define a custom style for large text */
+.large-text {
+  font-size: 60px;
+}
+
+/* Define a custom style for medium text */
+.medium-text {
+  font-size: 40px;
+}
+
+/* Define a custom style for medium text */
+.small-medium-text {
+  font-size: 30px;
+}
+
+/* Define a custom style for small text */
+.small-text {
+  font-size: 20px;
+}
+
+.red-text {
+  color: red;
 }

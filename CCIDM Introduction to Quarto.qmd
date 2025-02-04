@@ -12,16 +12,43 @@ format:
     toc-depth: 1
     #chalkboard: true #cannot use with self-contained
     self-contained: true
-    width: 1280
-    height: 720
+    width: 1300
+    height: 760
 execute:
   echo: false
   freeze: true
 ---
 
-# Overview of Quarto in RStudio by Dr. Jae Min Jung
+# Greetings and Introduction of Presenters/Panellists
 
-# R and RStudio
+::::{.incremental}
+-   Moderator: Dr. Jae Jung
+
+-   Presenters/panelists
+    -   Dr. Jae Jung, Professor of Marketing
+    -   Dr. Carsten Lange, Professor of Economics
+    -   Jarrod Griffin, MSDM Student
+    -   Ceren Ural, MSDM Student 
+:::
+
+
+# Learning Outcomes:
+
+After taking this workshop, participants should be able to:
+
+:::{.small-medium-text .incremental}
+1.  Describe how to do literate programming with Quarto
+2.  Learn how to set up and use Quarto within the RStudio IDE.
+3.  List the various output formats of Quarto.
+4.  Describe how to render basic Quarto documents to the various popular document formats.
+5.  Create a documents with basic mark down functions.
+6.  Explain the various platforms that host websites and reproducible documents.
+7.  Explain how Quarto can be used for work and school.
+:::
+
+# Overview of Quarto in RStudio by Dr. Jae Min Jung (15 min)
+
+## R and RStudio
 
 ::: small-medium-text
 -   Brief History
@@ -43,7 +70,7 @@ execute:
 Demonstrate
 :::
 
-# RStudio IDE
+## RStudio IDE
 
 -   Four quadrants
 -   Menu
@@ -52,9 +79,11 @@ Demonstrate
         -   Manually set `working directory`
         -   Automatic method with the `Rproj` file (Next slide)
 
-# Steps in Preparing for a project
+## Steps in Preparing for a project
 
-## 1. Start a new project
+---
+
+### 1. Start a new project
 
 -   Projects are the containers for all of your notebooks.
 
@@ -69,7 +98,9 @@ Demonstrate
 
 -   You should see your `.Rproj` file and others in the `Files` panel
 
-## 2. Start a codebook/notebook and save it
+---
+
+### 2. Start a codebook/notebook and save it
 
 -   R Scripts file
 
@@ -79,7 +110,7 @@ Demonstrate
 
 ------------------------------------------------------------------------
 
-### Markdown vs. HTML
+#### Markdown vs. HTML
 
 ::: small-text
 Markdown and HTML are both markup languages used for creating formatted content, but they have distinct characteristics. Here's a summary of their similarities and differences:
@@ -100,9 +131,11 @@ Markdown and HTML are both markup languages used for creating formatted content,
 | Extensibility | Limited, varies by flavor | Highly extensible with JavaScript |
 :::
 
-## 3. Start literate coding
+---
 
-# What is Quarto?
+### 3. Start literate coding
+
+## What is Quarto?
 
 ::: small-medium-text
 -   Quarto is an open-source technical publishing system designed for creating a wide variety of documents and publications (<https://quarto.org/>)
@@ -136,7 +169,9 @@ Markdown and HTML are both markup languages used for creating formatted content,
 
 ![](images/word_LaTeX_MD.png){#fig-compare fig-align="center"}
 
-## Quarto Work Flow Basics (Demo)
+---
+
+### Quarto Work Flow Basics (Demo)
 
 -   How to start it and save it (e.g., test.qmd)
 -   Rendering it:
@@ -147,13 +182,15 @@ Markdown and HTML are both markup languages used for creating formatted content,
 demonstrate it
 :::
 
-## Three Areas in Quarto File
+---
+
+### Three Areas in Quarto File
 
 -   Detailed tutorials available at [the official Quarto site](https://quarto.org/docs/get-started/hello/rstudio.html)
 
 ------------------------------------------------------------------------
 
-### 1. Yaml header
+#### 1. Yaml header
 
 An YAML header demarcated by three dashes (`---`) on either end.
 
@@ -175,7 +212,7 @@ execute:
 
 ------------------------------------------------------------------------
 
-### 2. Code chunk
+#### 2. Code chunk
 
 ```{{r}}
 #| label: demo-code-chunk
@@ -189,7 +226,7 @@ library(palmerpenguins)
 
 ------------------------------------------------------------------------
 
-### 3. Markdown text area
+#### 3. Markdown text area
 
 ::: incremental
 -   Text area is all the canvas area within qmd file other than Yaml header and code chun areas.
@@ -231,9 +268,11 @@ library(palmerpenguins)
 -   Handy reference sheet available at the RStudio menu:
     -   *Help \> Markdown Quick Reference*
 
-# Literate Programming in Quarto
+## Literate Programming in Quarto
 
-## Basic Operations
+---
+
+### Basic Operations
 
 ::: small-medium-text
 In the following code chunk, you will learn some basic operations in R.
@@ -290,7 +329,9 @@ min(2,5,90,30) # minimum
 ```
 :::
 
-## Coding Styles {#sec-coding-styles}
+---
+
+### Coding Styles {#sec-coding-styles}
 
 ```{r}
 #| code-fold: false
@@ -303,7 +344,7 @@ library(palmerpenguins)
 
 :::: medium-text
 ::: panel-tabset
-### Base R way of coding
+#### Base R way of coding
 
 ```{r}
 #| code-fold: false
@@ -313,7 +354,7 @@ head(penguins)
 mean(penguins$bill_length_mm, na.rm = TRUE)
 ```
 
-### Tidyverse way of coding
+#### Tidyverse way of coding
 
 ```{r}
 #| code-fold: false
@@ -328,7 +369,9 @@ penguins |>
 :::
 ::::
 
-## Pipe Operator
+---
+
+### Pipe Operator
 
 ::: {.callout-tip .incremental}
 -   R has multiple ways to accomplish the same goal.
@@ -338,9 +381,11 @@ penguins |>
 -   The pipe operator is one important difference between `base R` and `Tidyverse` in how we code.
 :::
 
-# Quarto Document Types
+## Quarto Document Types
 
-## HTML
+---
+
+### HTML
 
 ```         
 ---
@@ -350,7 +395,9 @@ editor: visual
 ---
 ```
 
-## PDF
+---
+
+### PDF
 
 -   In order to create PDFs you will need to install a recent distribution of [LaTeX](https://www.latex-project.org/).
 
@@ -374,7 +421,9 @@ editor: visual
 ---
 ```
 
-## MS Word
+---
+
+### MS Word
 
 ```         
 ---
@@ -384,7 +433,9 @@ editor: visual
 ---
 ```
 
-## Revealjs Presentation
+---
+
+### Revealjs Presentation
 
 ```         
 ---
@@ -394,7 +445,9 @@ editor: visual
 ---
 ```
 
-## Dashboard
+---
+
+### Dashboard
 
 ```         
 ---
@@ -404,12 +457,12 @@ editor: visual
 ---
 ```
 
-# Multiple Formats Option
+## Multiple Formats Option
 
 ```         
 ---
 title: "Housing Prices"
-author: "YOur Name"
+author: "Your Name"
 highlight-style: pygments
 format:
   html: 
@@ -422,14 +475,14 @@ format:
   docx: default
 ---
 ```
-# More resources
+
+## More resources
 
 -   [Introduction to Literate Programming](https://jaejungca.github.io/introduction-to-literate-programming-with-quarto/)
 
+# Quarto Markdown Demonstration by Jarrod Griffin (15 min)
 
-# Quarto Demonstration by Jarrod Griffin
-
-# Text Formatting and Structure
+## Text Formatting and Structure
 
 -   **Text Formatting:**
     -   **Bold:** `**bold text**`
@@ -440,7 +493,7 @@ format:
     -   `## Heading 2`
     -   `### Heading 3`
 
-# Lists and Organization
+## Lists and Organization
 
 -   **Unordered Lists:**
     -   Item A
@@ -451,7 +504,7 @@ format:
     2.  Second item
         1.  Sub-item 2.1
 
-# Links and Images
+## Links and Images
 
 -   **Hyperlinks:**
     -   Example: [Quarto Website](https://quarto.org)
@@ -459,7 +512,7 @@ format:
     -   **Local image:** `![](path/to/your-image.png)`
     -   **Online image:** `![](https://via.placeholder.com/150)`
 
-# Callout Blocks and Blockquotes
+## Callout Blocks and Blockquotes
 
 ::: callout-note
 **Note:** Callout blocks are great for drawing attention to important details.
@@ -468,9 +521,11 @@ format:
 > **Blockquote:**\
 > "Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text."
 
-# IDs and Cross-Referencing
+## IDs and Cross-Referencing
 
-## Section with an ID {#my-section}
+---
+
+### Section with an ID {#my-section}
 
 -   You can assign **IDs** to sections like above.
 -   **Cross-Reference:**\
@@ -478,7 +533,7 @@ format:
 -   You can also reference tables and figures:
     -   For example, refer to Table @tbl-example below.
 
-# Tables
+## Tables
 
 | Header 1 | Header 2 |
 |----------|----------|
@@ -494,7 +549,7 @@ format:
 | Cell A     |    Cell B    |      Cell C |
 | Cell D     |    Cell E    |      Cell F |
 
-# YAML Header vs. Local Chunk Settings
+## YAML Header vs. Local Chunk Settings
 
 -   **Global Settings:** Defined in the YAML header.
 -   **Local Chunk Settings:** Override global settings for specific code chunks.
@@ -514,7 +569,7 @@ plot(cars)
 plot(cars)
 ```
 
-# Live Demo: Rendering and Output
+## Live Demo: Rendering and Output
 
 -   **Render to HTML/PDF:**\
     Use the Quarto CLI or your IDE to render this document.
@@ -524,3 +579,9 @@ plot(cars)
     -   How the markdown and code chunks are processed.
 
     -   The integrated output of R code and formatted text.
+
+# Publishing on the web by Dr. Carsten Lange (15 min)
+
+# Panel Discussion and Q&A Moderated by Dr. Jung (15 min)
+
+# The End
