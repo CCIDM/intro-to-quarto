@@ -52,18 +52,18 @@ After taking this workshop, participants should be able to:
 
 ## R and RStudio
 
-::: small-medium-text
+::: medium-text
 -   Brief History
--   Installation
+-   Desktop Installation
     1.  R: <https://www.r-project.org/>
-    2.  RStudio:
-        -   Desktop <https://posit.co/download/rstudio-desktop/>
-        -   Posit Cloud: <https://posit.cloud/>
+    2.  RStudio: <https://posit.co/download/rstudio-desktop/>
+
+-   Posit Cloud: <https://posit.cloud/>
 :::
 
 . . .
 
-::: small-medium-text
+::: medium-text
 -   R Studio IDE menu (Next slide)
 -   Three major file types in RStudio (Next slide)
 :::
