@@ -584,4 +584,24 @@ plot(cars)
 
 # Panel Discussion and Q&A Moderated by Dr. Jung (15 min)
 
-# The End
+-   panelists
+    -   Dr. Carsten Lange, Professor of Economics
+    -   Jarrod Griffin, MSDM Student
+    -   Ceren Ural, MSDM Student 
+
+## Questions
+
+:::{.incremental}
+1. How can professors use Quarto for their teaching and research? 
+2. Looking back to your job prior to coming back to graduate school, how would you have used Quarto at your work?
+3. What is the difference between various websites (Quarto pub, Github, Netlify, etc.) hosting platforms that support Quarto? 
+4. Audience, free to ask your question!
+:::
+
+# Next Workshops:
+
+-  Workshop #2: "In-depth Interactive Report Authoring with Quarto"
+
+-  Workshop #3: "Design Stunning and Effective Presentation Slides Using Quarto"
+
+-  Workshop #4: "Creating Websites/Blogs and Job Market Portfolio with Quarto"  
